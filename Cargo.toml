@@ -1,23 +1,29 @@
 [package]
 name = "gdk"
 version = "0.0.1"
-authors = ["guillaume1.gomez@gmail.com"]
+authors = [
+    "guillaume1.gomez@gmail.com",
+    "letang.jeremy@gmail.com",
+    "mathijs.henquet@gmail.com",
+    "bpgarman@fastmail.fm",
+    "me@bstr.eu",
+    "zsoakes@gmail.com",
+    "Gleb Kozyrev <gleb@gkoz.com>",
+]
 
-description = "A rust binding for the GDK library"
+description = "Rust bindings for the GDK library"
 repository = "https://github.com/rust-gnome/gdk"
 license = "MIT"
+
+[lib]
+name = "gdk"
 
 [dependencies]
 libc = "0.1"
 c_vec = "^1.0.0"
 
-[lib]
-name = "gdk"
-crate_type = ["rlib"]
-path = "src/gdk.rs"
-
-[dependencies.gdk3-sys]
-path = "gdk3-sys"
+[dependencies.gdk-sys]
+path = "gdk-sys"
 version = "0.1.0"
 
 [dependencies.glib]
